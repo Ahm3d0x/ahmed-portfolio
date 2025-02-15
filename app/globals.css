@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.topbar-container {
+    display: flex;
+    flex-direction: row; /* Default layout */
+  }
+  
+  @media (max-width: 600px) {
+    .topbar-container {
+        margin-left: 2px;
+        width: 550px;
+        font-weight: normal;
+        position: fixed;
+        top: 20.25rem;
+        left: -17rem;
+        transform: rotate(90deg);
+    }
+
+    .topbar-container:hover{
+      left: -16rem;
+
+
+    }
+    .HomeGrid{
+      display: block;
+    }
+    .HomeAbout{
+      width: 80%;
+    }
+  }
