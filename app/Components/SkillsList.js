@@ -28,14 +28,14 @@ const skillsData = [
     title: "Databases",
     icon: "💾",
     description: "Experience with SQL and NoSQL databases.",
-    skills: ["MySQL", "SQL Server", "NoSQL"],
+    skills: ["MySQL", "SQL Server", "NoSQL", "JSON"],
   },
   {
     id: "desktop-dev",
     title: "Desktop Apps",
     icon: "🖥️",
     description: "Building cross-platform desktop applications.",
-    skills: ["Electron.js"],
+    skills: ["Electron.js (Node.js)"],
   },
   {
     id: "tools-tech",
@@ -44,11 +44,18 @@ const skillsData = [
     description: "Proficient in development tools & version control.",
     skills: ["Git", "GitHub", "VS Code"],
   },
+  {
+    id: "lang",
+    title: "Languages",
+    icon: "🏳️",
+    description: "Proficiency in various languages.",
+    skills: ["Arabic", "English"],
+  },
 ];
 
 export default function SkillsList() {
   return (
-    <section className="p-8 max-w-7xl mx-auto">
+    <section className="p-8 w-full mx-auto">
       {/* Header */}
       <motion.h1
         initial={{ opacity: 0, y: -10 }}

@@ -8,36 +8,50 @@ import CertificatesGrid from "./CertificatesGrid";
 import ContactSection from "./ContactSection";
 export default function Home() {
   const width = useScreenWidth(); 
-    return (
-        <div className="grid grid-cols-2 HomeGrid gap-8 mt-16 py-2">
-            {/* عنوان الصفحة */}
-            <div className="col-span-2 mb-10 text-center">
-                <h1 className="bg-gradient-to-r from-teal-400 to-green-500 bg-clip-text text-transparent text-6xl font-bold py-2">
-                    Hi, I'm
-                </h1>
-                <h2 className="text-green-500 text-4xl font-bold mt-2 py-2">
-                    Ahmed Mohamed Attia
-                </h2>
-            </div>
+  return (
+    <div className="grid grid-cols-2 HomeGrid gap-8 mt-16 py-2">
+        {/* عنوان الصفحة */}
+        <div className="col-span-2 mb-10 text-center" id="home">
+            <h1 className="bg-gradient-to-r from-teal-400 to-green-500 bg-clip-text text-transparent text-6xl font-bold py-2">
+                Hi, I'm
+            </h1>
+            <h2 className="text-green-500 text-4xl font-bold mt-2 py-2">
+                Ahmed Mohamed Attia
+            </h2>
+        </div>
 
-            {/* معلومات عني */}
+        {/* معلومات عني */}
+        <div className=" p-3" id="about">
             <AboutMe />
-            
-            {/* صورتي */}
+        </div>
+
+        {/* صورتي */}
+        <div  id="photo">
             <Photo />
-            
-            {/* المهارات */}
+        </div>
 
-            <main className="grid place-items-center col-span-2 min-h-screen text-white p-10">
-      <SkillsList />
+        {/* المهارات */}
+        <div id="skills" className=" p-3 col-span-2 min-h-screen text-white ">
+            <SkillsList />
+        </div>
 
-    </main>
-     
+        {/* المشاريع */}
+        <div  className="col-span-2  pl-5" id="projects">
             <ProjectsGrid />
+        </div>
+
+        {/* الشهادات */}
+        <div  className="col-span-2  pl-5" id="certificates">
             <CertificatesGrid />
-            <ContactSection />  
-        </div> 
-    );
+        </div>
+
+        {/* التواصل */}
+        <div  className="col-span-2  p-3" id="contact">
+            <ContactSection />
+        </div>
+    </div>
+);
+
 }
 
 // ✅ تحسين مظهر الصورة مع تأثير أنيق عند التحريك
@@ -45,9 +59,9 @@ function Photo() {
     return (
       <motion.div
         animate={{ rotate: 0 }} // Default rotation state
-        whileHover={{ rotateZ: [0, 2, -2, 0], scale: 1.2 }} // Subtle rotation on hover
+        whileHover={{ rotateZ: [0, 2, -2, 0], scale: 1.1 }} // Subtle rotation on hover
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-60 mx-auto my-10 overflow-hidden rounded-lg flex justify-center items-center"
+        className="w-72 mx-auto my-10 overflow-hidden rounded-lg flex justify-center items-center"
       >
         <img 
           src="/me2.jpg" 

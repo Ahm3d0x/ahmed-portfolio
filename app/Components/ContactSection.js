@@ -3,13 +3,77 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const contactData = [
-  { id: "email", title: "Email", icon: "📧", link: "mailto:ahm3d.m.attia@gmail.com" },
-  { id: "whatsapp", title: "WhatsApp", icon: "💬", link: "https://wa.me/201140409832" },
-  { id: "telegram", title: "Telegram", icon: "✈️", link: "https://t.me/Ahm3d_Attia" },
-  { id: "linkedin", title: "LinkedIn", icon: "🔗", link: "https://www.linkedin.com/in/ahmed-m-attia-757aa6292/" },
-  { id: "facebook", title: "Facebook", icon: "📘", link: "https://www.facebook.com/A7m3d.Attia" },
-];
-
+    { 
+      id: "email", 
+      title: "Email", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/apple-mail.png" alt="Email" />, 
+      link: "mailto:ahm3d.m.attia@gmail.com" 
+    },
+    { 
+      id: "whatsapp", 
+      title: "WhatsApp", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/windows/64/whatsapp--v1.png" alt="WhatsApp" />, 
+      link: "https://wa.me/201140409832" 
+    },
+    { 
+      id: "telegram", 
+      title: "Telegram", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/telegram.png" alt="Telegram" />, 
+      link: "https://t.me/Ahm3d_Attia" 
+    },
+    { 
+      id: "linkedin", 
+      title: "LinkedIn", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="LinkedIn" />, 
+      link: "https://www.linkedin.com/in/ahmed-m-attia-757aa6292/" 
+    },
+    { 
+      id: "facebook", 
+      title: "Facebook", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="Facebook" />, 
+      link: "https://www.facebook.com/A7m3d.Attia" 
+    },
+    {
+        id: "hihello",
+        title: "HiHello",
+        icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/business-contact.png" alt="HiHello" />,
+        link: "https://hihello.me/p/5e9c2426-f65b-4537-a1a3-1fa1e3c70cc5"
+      },
+    { 
+      id: "github", 
+      title: "GitHub", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/github.png" alt="GitHub" />, 
+      link: "https://github.com/Ahm3d0x" 
+    },
+    {
+        id: "hackerRank", 
+        title: "HackerRank", 
+        icon: <img width="50" height="50" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/50/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-filled-tal-revivo.png" alt="HackerRank" />, 
+        link: "https://www.hackerrank.com/your_username" // ضع رابط حسابك على HackerRank هنا
+      }
+      
+  ];
+  const contact = [
+    { 
+      id: "email", 
+      title: "Email", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/apple-mail.png" alt="Email" />, 
+      link: "mailto:ahm3d.m.attia@gmail.com" 
+    },
+    { 
+      id: "whatsapp", 
+      title: "WhatsApp", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/windows/64/whatsapp--v1.png" alt="WhatsApp" />, 
+      link: "https://wa.me/201140409832" 
+    },
+    { 
+      id: "telegram", 
+      title: "Telegram", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/telegram.png" alt="Telegram" />, 
+      link: "https://t.me/Ahm3d_Attia" 
+    }
+  ];
+  
 export default function ContactSection() {
   const [contactMethod, setContactMethod] = useState("");
   const [message, setMessage] = useState("");
@@ -31,22 +95,17 @@ export default function ContactSection() {
       case "telegram":
         targetLink = `https://t.me/Ahm3d_Attia?text=${encodeURIComponent(message)}`;
         break;
-      case "linkedin":
-        targetLink = "https://www.linkedin.com/in/ahmed-m-attia-757aa6292/";
-        break;
-      case "facebook":
-        targetLink = "https://www.facebook.com/A7m3d.Attia";
-        break;
     }
 
     window.open(targetLink, "_blank");
   };
 
   return (
-    <section id="contact" className="p-8 max-w-5xl col-span-2 mx-auto text-center">
+    <section id="contact" className="p-8 w-full col-span-2 mx-auto text-center">
       {/* Title */}
       <motion.h1 
         initial={{ opacity: 0, y: -20 }} 
+
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.8 }} 
         className="text-5xl font-extrabold bg-gradient-to-r from-teal-400 to-green-500 bg-clip-text text-transparent mb-6"
@@ -63,7 +122,7 @@ export default function ContactSection() {
             target="_blank"
             whileHover={{ scale: 1.1, rotate: 2 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col items-center p-4 bg-teal-800 hover:bg-teal-700 text-white rounded-xl shadow-lg transition-all"
+            className="flex flex-col items-center font-bold hover:text-orange-300  border-2 border-teal-700 hover:border-green-500 p-4 bg-gradient-to-br from-teal-900 to-teal-700 hover:bg-teal-700 text-white rounded-xl shadow-lg transition-all"
           >
             <span className="text-3xl">{contact.icon}</span>
             <span className="text-sm mt-2">{contact.title}</span>
@@ -76,7 +135,7 @@ export default function ContactSection() {
         initial={{ opacity: 0, y: 20 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.8 }} 
-        className="p-6 bg-gray-900 text-white rounded-xl shadow-lg max-w-lg mx-auto"
+        className="p-6 bg-gray-900 text-white rounded-xl shadow-lg sm:w-11/12 md:w-8/12 mx-auto"
       >
         <h2 className="text-xl font-semibold mb-4">Send Me a Message</h2>
 
@@ -88,7 +147,7 @@ export default function ContactSection() {
           onChange={(e) => setContactMethod(e.target.value)}
         >
           <option value="">Select...</option>
-          {contactData.map((contact) => (
+          {contact.map((contact) => (
             <option key={contact.id} value={contact.id}>{contact.title}</option>
           ))}
         </select>
