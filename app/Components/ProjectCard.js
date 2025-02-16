@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
-      className="bg-teal-900 border border-teal-700 rounded-xl shadow-lg hover:bg-teal-950 hover:border-2 hover:border-green-500 hover:shadow-2xl transition-all p-5"
+      className="bg-gradient-to-br from-teal-900 to-teal-700 border-teal-700 rounded-xl shadow-lg  hover:border-2 hover:border-green-500 hover:shadow-2xl transition-all p-5"
     >
       {/* Project Image (with fallback if no image available) */}
       <div className="overflow-hidden hover:border-2 hover:border-green-500 rounded-lg">

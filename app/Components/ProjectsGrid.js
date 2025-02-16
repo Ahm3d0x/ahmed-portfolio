@@ -99,7 +99,7 @@ let projectsData = [
     return (
       <section className="py-12 col-span-2 bg-teal-950 min-h-screen ">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl text-center text-white font-bold mb-10">My Projects</h1>
+          <h1 className="text-4xl text-center bg-gradient-to-r from-teal-400 to-green-500 bg-clip-text text-transparent font-bold mb-10">My Projects</h1>
   
           {/* Grid Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">

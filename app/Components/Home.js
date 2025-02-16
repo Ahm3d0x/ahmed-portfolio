@@ -2,15 +2,17 @@
 import { motion } from "framer-motion";
 import "../globals.css";
 import { useScreenWidth } from "./ScreenWidthComponent";
-import SkillCategory from "./SkillCategory";
+import SkillsList from "./SkillsList";
 import ProjectsGrid from "./ProjectsGrid";
+import CertificatesGrid from "./CertificatesGrid";
+import ContactSection from "./ContactSection";
 export default function Home() {
   const width = useScreenWidth(); 
     return (
         <div className="grid grid-cols-2 HomeGrid gap-8 mt-16 py-2">
             {/* عنوان الصفحة */}
             <div className="col-span-2 mb-10 text-center">
-                <h1 className="text-green-300 text-6xl font-bold py-2">
+                <h1 className="bg-gradient-to-r from-teal-400 to-green-500 bg-clip-text text-transparent text-6xl font-bold py-2">
                     Hi, I'm
                 </h1>
                 <h2 className="text-green-500 text-4xl font-bold mt-2 py-2">
@@ -25,11 +27,15 @@ export default function Home() {
             <Photo />
             
             {/* المهارات */}
-            {skillsData.map((category, index) => (
-        <SkillCategory key={index} title={category.title} icon={category.icon} skills={category.skills} />
-      ))}
-            <ProjectsGrid />
 
+            <main className="grid place-items-center col-span-2 min-h-screen text-white p-10">
+      <SkillsList />
+
+    </main>
+     
+            <ProjectsGrid />
+            <CertificatesGrid />
+            <ContactSection />  
         </div> 
     );
 }
@@ -74,39 +80,4 @@ function AboutMe() {
         </div>
     );
 }
-
-
-
-const skillsData = [
-  {
-    title: "Programming Languages",
-    icon: "💻",
-    skills: ["JavaScript (ES6+)", "TypeScript", "Python", "HTML5", "CSS3", "TailwindCSS"],
-  },
-  {
-    title: "Frontend Development",
-    icon: "🖥️",
-    skills: ["React.js", "Next.js", "Responsive Design & UI/UX Principles"],
-  },
-  {
-    title: "Backend Development",
-    icon: "⚙️",
-    skills: ["Node.js", "RESTful APIs & Authentication"],
-  },
-  {
-    title: "Databases",
-    icon: "💾",
-    skills: ["SQL (MySQL, SQL Server)", "JSON & NoSQL Databases"],
-  },
-  {
-    title: "Desktop Application Development",
-    icon: "🖥️",
-    skills: ["Electron.js (Building cross-platform desktop applications)"],
-  },
-  {
-    title: "Tools & Technologies",
-    icon: "🔧",
-    skills: ["Git", "GitHub", "VS Code"],
-  },
-];
 
