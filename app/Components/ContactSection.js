@@ -46,10 +46,11 @@ const contactData = [
       link: "https://github.com/Ahm3d0x" 
     },
     {
-        id: "hackerRank", 
-        title: "HackerRank", 
-        icon: <img width="50" height="50" src="https://www.hackerrank.com/profile/Ahm3d0x" 
-      }
+      id: "hackerRank", 
+      title: "HackerRank", 
+      icon: <img width="50" height="50" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/50/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-filled-tal-revivo.png" alt="HackerRank" />, 
+      link: "https://www.hackerrank.com/profile/Ahm3d0x" 
+    }
       
   ];
   const contact = [
