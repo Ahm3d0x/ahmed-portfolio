@@ -66,6 +66,15 @@ let projectsData = [
       "code_link": "https://github.com/Ahm3d0x/Spark"
     },
     {
+      "title": "BIG STORE - Modern & Scalable E-Commerce Platform",
+      "type": "E-Commerce",
+      "description": "BIG STORE is a dynamic and responsive web-based e-commerce platform designed for a seamless shopping experience using HTML, CSS, and JavaScript. It features Local Storage & JSON for efficient data handling.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Local Storage", "JSON"],
+      "image": "/BigStore.jpg",
+      "demo_link": "https://ahm3d0x.github.io/BIG-STORE/",
+      "code_link": "https://github.com/Ahm3d0x/BIG-STORE",
+    },
+    {
       "title": "Like App (Social Media Platform)",
       "type": "Social Media App",
       "description": "A mini social networking platform where users can register, post content, like, and comment on posts.",
