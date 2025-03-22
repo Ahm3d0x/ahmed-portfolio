@@ -51,7 +51,7 @@ let projectsData = [
   "title": "Office System Management",
   "type": "Desktop Application",
   "description": "An office management application built using JavaScript, HTML, CSS, Node.js, and Electron. It streamlines office tasks like task management, invoice generation, and document handling.",
-  "technologies": ["JavaScript", "HTML", "CSS", "Node.js", "Electron"],
+  "technologies": ["JavaScript", "HTML", "CSS","Local Storage", "JSON" , "Index DB", "Node.js", "Electron"],
   "image": "/Office-System-Management.png",
   "demo_link": "https://drive.google.com/file/d/1aJPziiuLfse4UiSa5fDjhIhxF73MUoBX/view?usp=drivesdk",
   "code_link": "https://github.com/Ahm3d0x/-Office-System-Management-/tree/main"
