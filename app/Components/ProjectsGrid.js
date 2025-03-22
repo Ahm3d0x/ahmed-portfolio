@@ -48,6 +48,16 @@ let projectsData = [
       "code_link": "https://github.com/Ahm3d0x/Task-List-Application-js-css-html"
     },
     {
+  "title": "Office System Management",
+  "type": "Desktop Application",
+  "description": "An office management application built using JavaScript, HTML, CSS, Node.js, and Electron. It streamlines office tasks like task management, invoice generation, and document handling.",
+  "technologies": ["JavaScript", "HTML", "CSS", "Node.js", "Electron"],
+  "image": "/Office-System-Management.jpg",
+  "demo_link": "https://drive.google.com/file/d/1aJPziiuLfse4UiSa5fDjhIhxF73MUoBX/view?usp=drivesdk",
+  "code_link": "https://github.com/Ahm3d0x/-Office-System-Management-/tree/main"
+}
+,
+    {
       "title": "Mini Language Translator",
       "type": "Translation Tool",
       "description": "A language translator web app that allows users to select and translate text between multiple languages.",
